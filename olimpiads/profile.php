@@ -17,12 +17,13 @@ include('session.php');
 	<!--div do enunciado, com as alternativas e o button de enviar a resposta.-->
 	<!-- tem que pegar do banco de dados-->
 	<div id="enunciado">
-		<p id="problema1">
+		<form id="problema1">
 			<label>Respostas:</label>
 			<input type="radio"
 				name="alternativas"
 				id="letra_a"
 				value="a"
+				checked="checked"
 			<label for="letra_a">a)</label>
 
 			<input type="radio"
@@ -43,9 +44,7 @@ include('session.php');
 				value="d"
 			<label for="letra_d">d)</label>
 
-		</p>
+		</form>
 		<button type="submit" value="Submit">Enviar</button>
-	</div>
-	<div id="envio">Reposta enviada!</div>
 </body>
 </html>

@@ -1,8 +1,6 @@
 
 $(document).ready(function() {
-	$("#envio").hide();
 	$("button").click(function(){
-		$("#enunciado").hide(1000);
-		$("#envio").show();
-	})
-})
+		alert("value: " + $("#problema1 input[type='radio'][name='alternativas']:checked").val());
+		});
+});
