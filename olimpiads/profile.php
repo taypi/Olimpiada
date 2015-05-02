@@ -23,28 +23,55 @@ include('session.php');
 				name="alternativas"
 				id="letra_a"
 				value="a"
-				checked="checked"
+				checked="checked">
 			<label for="letra_a">a)</label>
 
 			<input type="radio"
 				name="alternativas"
 				id="letra_b"
-				value="b"
+				value="b">
 			<label for="letra_b">b)</label>
 
 			<input type="radio"
 				name="alternativas"
 				id="letra_c"
-				value="c"
+				value="c">
 			<label for="letra_c">c)</label>
 
 			<input type="radio"
 				name="alternativas"
 				id="letra_d"
-				value="d"
+				value="d">
 			<label for="letra_d">d)</label>
-
 		</form>
-		<button type="submit" value="Submit">Enviar</button>
+		<button id="btn1" type="submit" value="Submit">Enviar</button>
+	    <form id="problema2">
+	    	<label>Respostas:</label>
+	    	<input type="radio"
+				name="alternativas2"
+				id="letra_2a"
+				value="a"
+				checked="checked">
+			<label for="letra_a">a)</label>
+
+			<input type="radio"
+				name="alternativas2"
+				id="letra_2b"
+				value="b">
+			<label for="letra_b">b)</label>
+
+			<input type="radio"
+				name="alternativas2"
+				id="letra_2c"
+				value="c">
+			<label for="letra_c">c)</label>
+
+			<input type="radio"
+				name="alternativas2"
+				id="letra_2d"
+				value="d">
+			<label for="letra_d">d)</label>
+	    </form>
+	</div>
 </body>
 </html>
