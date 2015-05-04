@@ -72,6 +72,7 @@ include('session.php');
 				value="d">
 			<label for="letra_d">d)</label>
 	    </form>
+	    <button id="btn2" type="submit" value="Submit">Enviar</button>
 	</div>
 </body>
 </html>
