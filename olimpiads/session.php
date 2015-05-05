@@ -11,6 +11,27 @@ $user_check=$_SESSION['login_user'];
 $ses_sql=mysql_query("select usuario from alunos where usuario='$user_check'", $connection);
 $row = mysql_fetch_assoc($ses_sql);
 $login_session =$row['usuario'];
+// Pegando a classe da sessão
+$ses_sql2=mysql_query("select id_classe from alunos where usuario='$user_check'", $connection);
+$row2 = mysql_fetch_assoc($ses_sql2);
+$class_session =$row2['id_classe'];
+switch($class_session){
+	case 1:
+		$user_class ="Guerreiro";
+		break;
+	case 2:
+		$user_class ="Mago";
+		break;
+	case 3:
+		$user_class ="Arqueiro";
+		break;
+	case 4:
+		$user_class ="Clérigo";
+		break;
+	case 5:
+		$user_class ="Ladino";
+		break;
+}
 if(!isset($login_session)){
 mysql_close($connection); // Closing Connection
 header('Location: index.php'); // Redirecting To Home Page
