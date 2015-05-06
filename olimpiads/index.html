@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PieTimer example</title>
+<link href="http://www.jqueryscript.net/css/top.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="pietimer.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.pietimer.js"></script>
+<script type="text/javascript">
+    $(function() {
+      $('#timer').pietimer({
+          timerSeconds: 20,
+          color: '#234',
+          fill: false,
+          showPercentage: true,
+          callback: function() {
+              alert("You Lose!");
+              $('#timer').pietimer('reset');
+          }
+      });
+    });
+  </script>
+</head>
+<body>
+<div id="menu">
+<div class="w">
+<a href="http://www.jqueryscript.net/loading/Graphical-Circular-Timer-with-jQuery-CSS3-pietimer.html">Download</a> - <a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></div>
+</div>
+<div id="timer" style="margin-top:100px;"></div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

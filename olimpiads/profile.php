@@ -8,14 +8,31 @@ include('session.php');
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="olimpiada.js"></script>
-    <script src="jquery.pietimer.js"></script>
-</head>
-<body>
-	<div id="etapa">
+    <link rel="stylesheet" type="text/css" href="pietimer.css">
+    <script type="text/javascript" src="jquery.pietimer.js"></script>
+
+    <script type="text/javascript">
+    $(function() {
+      $('#timer').pietimer({
+          timerSeconds: 10,
+          color: '#234',
+          fill: false,
+          showPercentage: true,
+          callback: function() {
+              alert("yahoo, timer is done!");
+              $('#timer').pietimer('reset');
+          }
+      });
+    });
+  </script>
+
+  <div id="etapa">
 		<a id="etapa1">Etapa 1</a>
 		<a id="etapa2" href="profile2.php">Etapa 2</a>
 		<a id="etapa3" href="profile3.php">Etapa 3</a>
 	</div>
+</head>
+<body>
 	<div id="profile">
 		<b id="welcome">Welcome : <i><?php echo $login_session; ?></i> <br> Classe : <?php echo $user_class; ?></b>
 		
@@ -24,6 +41,7 @@ include('session.php');
 	<!--div do enunciado, com as alternativas e o button de enviar a resposta.-->
 	<!-- tem que pegar do banco de dados-->
 	<button id="start">Start!</button>
+	<div id="timer"></div>
 	<div id="enunciado">
 		<form id="problema1">
 			<label>Respostas:</label>
